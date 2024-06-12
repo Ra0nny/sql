@@ -1,0 +1,26 @@
+-----Integração sql e Vss python3
+
+
+
+
+
+import psycopg2
+
+conn_info = {
+    
+    "db_name":"",
+    "user":"",
+    "password":"",
+    "host":"",
+    "port":""
+    
+}
+
+
+
+try:
+    conn = psycopg2.connect(**conn_info)
+    cur = conn.cursor()
+except Exception as e:
+    print("Deu ruim o erro foi eu ") 
+    print(e)   
